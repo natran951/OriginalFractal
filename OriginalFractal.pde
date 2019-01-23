@@ -20,6 +20,8 @@ public void myFractal(int x, int y, int siz) {
   	ellipse(x,y,siz,siz);
   	fill((int)(Math.random()*55)+100);
   	ellipse(x+500,y+500,siz,siz);
+  	ellipse(x,y+500,siz,siz);
+  	ellipse(x+500,y,siz,siz);
   	if (siz > 10) {
   		myFractal(x,y,int(siz/1.1));
   	}
