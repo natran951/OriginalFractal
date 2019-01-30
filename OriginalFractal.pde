@@ -8,16 +8,16 @@ public void setup() {
 public void draw() {
 	background(0);
   //myFractal(0,0,1337-5*Math.abs(mouseX-250));
-  myFractal(250,250,500);
+  myFractal(250,250,500-mouseX);
   fill(255);
   rect(0,0,250,500);
-  myFractal2(250,250,500);
+  myFractal2(250,250,500-mouseX);
   fill(0);
   rect(0,250,0,500);
-  myFractal3(250,250,500);
+  myFractal3(250,250,500-mouseX);
   fill(255);
   rect(500,500,500,500);
-  myFractal4(250,250,500);
+  myFractal4(250,250,500-mouseX);
 }
 
 public void myFractal(int x, int y, int siz) {
@@ -40,7 +40,7 @@ public void myFractal(int x, int y, int siz) {
     fill(0);
     stroke(255);
     arc((float)x,(float)y,(float)siz,(float)siz,-PI/2,0);
-    if(siz < 10) {
+    if(siz < 2) {
       arc((float)x,(float)y,(float)siz,(float)siz,-PI/2,0);
     }
     else {
@@ -51,7 +51,7 @@ public void myFractal2(int x, int y, int siz) {
   fill(255);
   stroke(0);
   arc((float)x,(float)y,(float)siz,(float)siz,PI,3*PI/2);
-    if(siz < 10) {
+    if(siz < 2) {
       arc((float)x,(float)y,(float)siz,(float)siz,PI,3*PI/2);
     }
     else {
@@ -63,7 +63,7 @@ public void myFractal3(int x, int y, int siz) {
   fill(0);
   stroke(255);
   arc((float)x,(float)y,(float)siz,(float)siz,PI/2,PI);
-    if(siz < 10) {
+    if(siz < 2) {
       arc((float)x,(float)y,(float)siz,(float)siz,PI/2,PI);
     }
     else {
@@ -75,7 +75,7 @@ public void myFractal4(int x, int y, int siz) {
   fill(255);
   stroke(0);
   arc((float)x,(float)y,(float)siz,(float)siz,0,PI/2);
-    if(siz < 10) {
+    if(siz < 2) {
       arc((float)x,(float)y,(float)siz,(float)siz,0,PI/2);
     }
     else {
